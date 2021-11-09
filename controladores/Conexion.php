@@ -1,8 +1,8 @@
-<?php 
+<?php
 define('DATABASE','dblibreria');
-define('HOST','localhost');
+define('HOST','192.168.56.6');
 define('USERNAME','root');
-define('PASSWORD','');
+define('PASSWORD','Mesclable>aterrizar_referir1imitado');
 class Conexion
 {
     function obtene_conexion(){
