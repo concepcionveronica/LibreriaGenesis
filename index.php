@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>Librería Génesis</title>
-	</head>
-	<body>
-		<h3>Página de inicio</h3>
-	</body>
+<?php include 'layouts/header.php'; ?>
+// extra css file
+<?php include 'layouts/headerStyle.php'; ?>
+<body>
+
+	<?php include 'layouts/loader.php'; ?>
+
+	<?php include 'layouts/navbar.php'; ?>
+	<div id="div_vista_cont">
+		<!--Aca se carga todo las secciones -->
+	</div>
+	<?php include 'layouts/footer.php'; ?>
+
+	<?php include 'layouts/footerScript.php'; ?>
+
+</body>
 </html>
