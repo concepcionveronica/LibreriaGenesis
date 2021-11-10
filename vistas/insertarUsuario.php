@@ -1,20 +1,14 @@
-<?php include 'layouts/header.php'; ?>
-include_once 'config.php';
-include_once 'conexion.php';
-include_once 'Ususario.php';
-include_once 'RepositorioUsuario.php';
-include_once 'ValidarUsuario.php';
-
+<?php include '../layouts/header.php'; ?>
 <!-- C3 charts css -->
-<link href="public/assets/plugins/c3/c3.min.css" rel="stylesheet" type="text/css" />
+<link href="../public/assets/plugins/c3/c3.min.css" rel="stylesheet" type="text/css" />
 
-<?php include 'layouts/headerStyle.php'; ?>
+<?php include '../layouts/headerStyle.php'; ?>
 
     <body>
 
-        <?php include 'layouts/loader.php'; ?>
+        <?php include '../layouts/loader.php'; ?>
 
-        <?php include 'layouts/navbar.php'; ?>
+        <?php include '../layouts/navbar.php'; ?>
 
         <div class="wrapper">
             <div class="container-fluid">
@@ -39,30 +33,30 @@ include_once 'ValidarUsuario.php';
         <div class="col-md-4">
           <h1>Formulario Usuario</h1>
 
-          <form method="POST" class="guardar_datos" id="guardar_los_datos" action="Conexion/controlador.php">
-          <input type="hidden" name="insertar_valores" value="si_insertalo"> 
+          <form method="POST" class="guardar_datos" id="guardar_los_datos" action="../controladores/controlador.php">
+          <input type="hidden" name="insertar_valores" value="si_insertalo">
             <div class="form-group">
               <label for="nombre">Nombre</label>
               <input type="text" class="form-control" name="nombre" id="nombre" autocomplete="off" required="true" placeholder="Ingrese nombre">
-               
+
             </div>
             <div class="form-group">
               <label for="apellido">Apellido</label>
               <input type="text" class="form-control" name="apellido" id="apellido" autocomplete="off" required="true" placeholder="Ingrese apellido">
-               
+
             </div>
             <div class="form-group">
               <label for="correo">correo</label>
               <input type="text" class="form-control" name="correo" id="correo" autocomplete="off" required="true" placeholder="Ingrese correo">
-               
+
             </div>
             <div class="form-group">
               <label for="telefono">contraseña</label>
               <input type="password" class="form-control" name="contra" id="contra" autocomplete="off" required="true" placeholder="Ingrese contraseña">
-               
+
             </div>
 
-             
+
             <button type="submit" class="btn btn-primary">Guardar datos</button>
              <button type="reset" id="resetear" name="resetear" class="btn btn-danger">Cancelar</button>
           </form>
@@ -72,37 +66,37 @@ include_once 'ValidarUsuario.php';
         <div class="col-md-8">
           <h1>Datos registrados</h1>
           <div id="aqui_la_tabla">
-            
+
           </div>
 
         </div>
       </div>
-    
+
 
             </div> <!-- end container -->
         </div>
         <!-- end wrapper -->
 
-        <?php include 'layouts/footer.php'; ?>
+        <?php include '../layouts/footer.php'; ?>
 
-<?php include 'layouts/footerScript.php'; ?>
+<?php include '../layouts/footerScript.php'; ?>
 
 <!-- Peity chart JS -->
-<script src="public/assets/plugins/peity-chart/jquery.peity.min.js"></script>
+<script src="../public/assets/plugins/peity-chart/jquery.peity.min.js"></script>
 <!--C3 Chart-->
-<script type="text/javascript" src="public/assets/plugins/d3/d3.min.js"></script>
-<script type="text/javascript" src="public/assets/plugins/c3/c3.min.js"></script>
+<script type="text/javascript" src="../public/assets/plugins/d3/d3.min.js"></script>
+<script type="text/javascript" src="../public/assets/plugins/c3/c3.min.js"></script>
 <!-- Jvector Map js -->
-<script src="public/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="public/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<script src="public/assets/plugins/jvectormap/gdp-data.js"></script>
+<script src="../public/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+<script src="../public/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="../public/assets/plugins/jvectormap/gdp-data.js"></script>
 <!-- KNOB JS -->
-<script src="public/assets/plugins/jquery-knob/excanvas.js"></script>
-<script src="public/assets/plugins/jquery-knob/jquery.knob.js"></script>
+<script src="../public/assets/plugins/jquery-knob/excanvas.js"></script>
+<script src="../public/assets/plugins/jquery-knob/jquery.knob.js"></script>
 <!-- Page specific js -->
-<script src="public/assets/pages/dashboard.js"></script>
+<script src="../public/assets/pages/dashboard.js"></script>
 <!-- App js -->
-<script src="public/assets/js/app.js"></script>
+<script src="../public/assets/js/app.js"></script>
 
     </body>
     <script>
@@ -121,7 +115,7 @@ include_once 'ValidarUsuario.php';
           $.ajax({
             dataType: "json",
             method: "POST",
-            url:'Controlador.php',
+            url:'../controladores/Controlador.php',
             data : datos,
           }).done(function(mensaje) {
             if(mensaje[0]=="Exito"){
@@ -142,7 +136,7 @@ include_once 'ValidarUsuario.php';
         $.ajax({
           dataType: "json",
           method: "POST",
-          url:'Controlador.php',
+          url:'../controladores/Controlador.php',
           data : datos,
         }).done(function(mensaje) {
           if(mensaje[0]=="Exito"){
@@ -166,7 +160,7 @@ include_once 'ValidarUsuario.php';
       $.ajax({
           dataType: "json",
           method: "POST",
-          url:'Controlador.php',
+          url:'../controladores/Controlador.php',
           data : datos,
       }).done(function(json) {
         console.log("Estos datos retorna: ",json);
