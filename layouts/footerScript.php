@@ -8,3 +8,4 @@
         <script src="../public/assets/js/jquery.scrollTo.min.js"></script>
 
 		<script src="../public/assets/js/app.js"></script>
+		<script src="../public/assets/js/script.js"></script>
