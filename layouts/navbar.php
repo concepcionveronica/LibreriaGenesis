@@ -38,16 +38,16 @@
                             </li>
                             <!-- language-->
                             <li class="list-inline-item dropdown notification-list hide-phone">
-                                
-                               
+
+
                             </li>
                             <!-- notification-->
-                           
+
                             <!-- User-->
                             <li class="list-inline-item dropdown notification-list">
                                 <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
                                    aria-haspopup="false" aria-expanded="false">
-                                    <img src="public/assets/images/users/admin.png" alt="user" class="rounded-circle">
+                                    <img src="../public/assets/images/users/admin.png" alt="user" class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                     <a class="dropdown-item" href="#"><i class="dripicons-user text-muted"></i> Profile</a>
@@ -97,12 +97,12 @@
                                 </ul>
                             </li>
 
-                            
-                           
+
+
                             <li class="has-submenu">
                                 <a href="#"><i class="mdi mdi-cube-outline"></i>Movimiento</a>
                                 <ul class="submenu">
-                                    
+
                                     <li><a href="email-inbox.php">Realizar Venta</a></li>
                                     <li><a href="email-read.php">Despachar Pedido</a></li>
                                     <li><a href="email-read.php">Realizar Corte</a></li>
@@ -118,7 +118,7 @@
                                             <li><a href="pages-login.php">Manual de Usuario</a></li>
                                             <li><a href="pages-login.php">Backup</a></li>
                                         </ul>
-                                    </li>                                  
+                                    </li>
                                 </ul>
                             </li>
 
@@ -134,7 +134,7 @@
                                 </ul>
                             </li>
 
-                            
+
                         </ul>
                         <!-- End navigation menu -->
                     </div> <!-- end #navigation -->
