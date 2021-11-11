@@ -17,9 +17,9 @@ require_once("Conexion.php");
 
 	}else if (isset($_POST['insertar_valores']) && $_POST['insertar_valores']=="si_insertalo") {
 		try {
-			$sql = "INSERT INTO proveedor(nombre,apellido,direccion,telefono)values(?,?,?,?)";
+			$sql = "INSERT INTO proveedor(nombre,apellido,direccion,telefono,tipo)values(?,?,?,?,?)";
 			$statement = $conectar->prepare($sql);
-			$statement->execute(array($_POST['nombre'],$_POST['apellido'],$_POST['direccion'],$_POST['telefono']));
+			$statement->execute(array($_POST['nombre'],$_POST['apellido'],$_POST['direccion'],$_POST['telefono'],$_POST['tipoP']));
 			$cuantos  = $statement->rowCount();
 			print json_encode(array("Exito",$_POST));
 		} catch (Exception $e) {

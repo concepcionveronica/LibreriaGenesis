@@ -81,7 +81,7 @@
 					<ul class="submenu">
 						<li><a onclick="contenido_seccion('vistas/insertarUsuario.php')">Ingresar Usuario</a></li>
 						<li><a onclick="contenido_seccion('vistas/insertarCliente.php')">Ingresar Cliente</a></li>
-						<li><a href="insertarProveedor.php">Ingresar Proveedor</a></li>
+						<li><a onclick="contenido_seccion('vistas/insertarProveedor.php')">Ingresar Proveedor</a></li>
 						<li><a href="insertarProducto.php">Ingresar Producto</a></li>
 					</ul>
 				</li>
