@@ -79,7 +79,7 @@
 				<li class="has-submenu">
 					<a href="#"><i class="mdi mdi-view-dashboard"></i>ARCHIVO</a>
 					<ul class="submenu">
-						<li><a href="insertarUsuario.php">Ingresar Usuario</a></li>
+						<li><a onclick="contenido_seccion('vistas/insertarUsuario.php')">Ingresar Usuario</a></li>
 						<li><a onclick="contenido_seccion('vistas/insertarCliente.php')">Ingresar Cliente</a></li>
 						<li><a href="insertarProveedor.php">Ingresar Proveedor</a></li>
 						<li><a href="insertarProducto.php">Ingresar Producto</a></li>
