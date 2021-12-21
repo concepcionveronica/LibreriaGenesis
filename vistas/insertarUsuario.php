@@ -93,6 +93,7 @@ $(function(){
 		});
 	});
 });
+	
 function cargar_ajax(){
 	console.log("llega a la funcion ajax");
 	// return;
