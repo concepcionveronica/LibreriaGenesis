@@ -5,8 +5,8 @@
 		<div class="container-fluid">
 			<!-- Logo container-->
 			<div class="logo">
-				<a href="../" class="logo">
-					<img src="../public/imagenes/logo.png" alt="" height="30">
+				<a href="" class="logo">
+					<img src="./public/imagenes/logo.png" alt="30" height="30" >
 				</a>
 			</div>
 			<!-- End Logo container-->
@@ -23,9 +23,7 @@
 				<ul class="list-inline float-right mb-0">
 					<!-- Search -->
 					<li class="list-inline-item dropdown notification-list">
-						<a class="nav-link waves-effect toggle-search" href="#"  data-target="#search-wrap">
-							<i class="mdi mdi-magnify noti-icon"></i>
-						</a>
+						
 					</li>
 					<!-- Fullscreen -->
 					<li class="list-inline-item dropdown notification-list hide-phone">
@@ -38,18 +36,17 @@
 					</li>
 					<!-- notification-->
 					<!-- User-->
+					<span><b>Oscar Urias<b></span>
 					<li class="list-inline-item dropdown notification-list">
 						<a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
 						aria-haspopup="false" aria-expanded="false">
-						<img src="../public/assets/images/users/admin.png" alt="user" class="rounded-circle">
+						<img src="./public/assets/images/users/admin.png" alt="user" class="rounded-circle">
 					</a>
 					<div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-						<a class="dropdown-item" href="#"><i class="dripicons-user text-muted"></i> Profile</a>
-						<a class="dropdown-item" href="#"><i class="dripicons-wallet text-muted"></i> My Wallet</a>
-						<a class="dropdown-item" href="#"><span class="badge badge-success pull-right m-t-5">5</span><i class="dripicons-gear text-muted"></i> Settings</a>
-						<a class="dropdown-item" href="#"><i class="dripicons-lock text-muted"></i> Lock screen</a>
+						<a class="dropdown-item" href="#"><i class="dripicons-user text-muted"></i> Perfil</a>
+						<a class="dropdown-item" href="#"><i class="dripicons-lock text-muted"></i> BLoquear Pantalla</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#"><i class="dripicons-exit text-muted"></i> Logout</a>
+						<a class="dropdown-item" href="#"><i class="dripicons-exit text-muted"></i> Salir</a>
 					</div>
 				</li>
 				<li class="menu-item list-inline-item">
@@ -79,19 +76,19 @@
 				<li class="has-submenu">
 					<a href="#"><i class="mdi mdi-view-dashboard"></i>ARCHIVO</a>
 					<ul class="submenu">
-						<li><a onclick="contenido_seccion('vistas/insertarUsuario.php')">Ingresar Usuario</a></li>
+						<li class="mdi mdi-human"><a onclick="contenido_seccion('vistas/insertarUsuario.php')">Ingresar Usuario</a></li>
 						<li><a onclick="contenido_seccion('vistas/insertarCliente.php')">Ingresar Cliente</a></li>
-						<li><a href="insertarProveedor.php">Ingresar Proveedor</a></li>
-						<li><a href="insertarProducto.php">Ingresar Producto</a></li>
+						<li><a onclick="contenido_seccion('vistas/insertarProveedor.php')">Ingresar Proveedor</a></li>
+						<li><a onclick="contenido_seccion('vistas/insertarProducto.php')">Ingresar Producto</a></li>
 					</ul>
 				</li>
 				<li class="has-submenu">
 					<a href="#"><i class="mdi mdi-cube-outline"></i>Movimiento</a>
 					<ul class="submenu">
 
-						<li><a href="email-inbox.php">Realizar Venta</a></li>
-						<li><a href="email-read.php">Despachar Pedido</a></li>
-						<li><a href="email-read.php">Realizar Corte</a></li>
+						<li><a onclick="contenido_seccion('vistas/insertarVentas.php')">Realizar Venta</a></li>
+						<li><a onclick="contenido_seccion('vistas/insertarPedido.php')">Despachar Pedido</a></li>
+						<li><a onclick="contenido_seccion('vistas/realizarcorte.php')">Realizar Corte</a></li>
 					</ul>
 				</li>
 				<li class="has-submenu">

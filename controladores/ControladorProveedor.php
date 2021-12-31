@@ -17,9 +17,9 @@ require_once("Conexion.php");
 
 	}else if (isset($_POST['insertar_valores']) && $_POST['insertar_valores']=="si_insertalo") {
 		try {
-			$sql = "INSERT INTO proveedor(nombre,apellido,direccion,telefono)values(?,?,?,?)";
+			$sql = "INSERT INTO proveedor(nombre,apellido,direccion,telefono,tipo)values(?,?,?,?,?)";
 			$statement = $conectar->prepare($sql);
-			$statement->execute(array($_POST['nombre'],$_POST['apellido'],$_POST['direccion'],$_POST['telefono']));
+			$statement->execute(array($_POST['nombre'],$_POST['apellido'],$_POST['direccion'],$_POST['telefono'],$_POST['tipoP']));
 			$cuantos  = $statement->rowCount();
 			print json_encode(array("Exito",$_POST));
 		} catch (Exception $e) {
@@ -34,17 +34,18 @@ require_once("Conexion.php");
 		$statement->execute();
 		$datos = $statement->fetchAll();
 		$html=$html_td="";
-
+        $con=0;   
 		foreach ($datos as $row){
+			$$con=0;
 			$html_td.='<tr>';
-				$html_td.='<td>'.$row['idproveedor'].'</td>';
+				$html_td.='<td>'.$con.'</td>';
 				$html_td.='<td>'.$row['nombre'].'</td>';
 				$html_td.='<td>'.$row['apellido'].'</td>';
 				$html_td.='<td>'.$row['direccion'].'</td>';
 				$html_td.='<td>'.$row['telefono'].'</td>';
 				$html_td.='<td>
-								<button  type="button" class="btn btn-primary">Editar</button>
-								<button type="button" class="btn btn-danger btn_eliminar" data-id="'.$row['idproveedor'].'">Eliminar</button>
+								<button  type="button" class="btn btn-primary"><img src="./public/imagenes/agregar.png" height="40" width="40" onclick=""> </button>
+								<button type="button" class="btn btn-danger btn_eliminar" data-id="'.$row['idproveedor'].'"><img src="./public/imagenes/lista.png" height="40" width="40" onclick=""></button>
 
 							</td>';
 			$html_td.='<tr>';
@@ -53,7 +54,7 @@ require_once("Conexion.php");
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>Row</th>
+						<th>N°</th>
 						<th>Nombre</th>
 						<th>Apellido</th>
 						<th>Dirección</th>

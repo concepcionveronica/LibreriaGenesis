@@ -5,13 +5,13 @@ include_once '../controladores/conexion.php';
 		<div class="container-fluid">
 
 			<!-- Page-Title -->
-			<div class="row">
+			<div class="row-color-box">
 				<div class="col-sm-12">
 					<div class="page-title-box">
 						<div class="btn-group pull-right">
 							<ol class="breadcrumb hide-phone p-0 m-0">
 								<li class="breadcrumb-item"><a href="#">Genesis</a></li>
-								<li class="breadcrumb-item active">Usuario</li>
+								<li class="breadcrumb-item active">Vendedor</li>
 							</ol>
 						</div>
 						<h4 class="page-title"></h4>
@@ -20,9 +20,9 @@ include_once '../controladores/conexion.php';
 			</div>
 			<!-- end page title end breadcrumb -->
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4" id="row1" name=row1>
 					<h1>Formulario Cliente</h1>
-					<form method="POST" class="guardar_datos" id="guardar_los_datos" action="../controladores/Controladorcliente.php">
+					<form method="POST" class="guardar_datos" id="guardar_los_datos" action="./controladores/Controladorcliente.php">
 						<input type="hidden" name="insertar_valores" value="si_insertalo">
 						<div class="form-group">
 							<label for="dui">Dui</label>
@@ -44,11 +44,11 @@ include_once '../controladores/conexion.php';
 							<label for="telefono">Telefono</label>
 							<input type="text" class="form-control" name="telefono" id="telefono" data-inputmask="'alias': 'telefono'" autocomplete="off" required="true" placeholder="Ingrese telefono">
 						</div>
-						<button type="submit" class="btn btn-primary">Guardar datos</button>
-						<button type="reset" id="resetear" name="resetear" class="btn btn-danger">Cancelar</button>
+						<button type="submit" class="btn btn-primary"><img src="./public/imagenes/guardar.png" height="40" width="40" onclick="" class="rounded-circle" ></button>
+						<button type="reset" id="resetear" name="resetear" class="btn btn-danger"><img src="./public/imagenes/eliminar.png" height="40" width="40" onclick="" class="rounded-circle" ></button>
 					</form>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8" name="seccion_lista" id="seccion_lista">
 					<h1>Datos registrados</h1>
 					<div id="aqui_la_tabla">
 					</div>
@@ -73,7 +73,7 @@ $(function(){
 		$.ajax({
 			dataType: "json",
 			method: "POST",
-			url:'../controladores/Controladorcliente.php',
+			url:'./controladores/Controladorcliente.php',
 			data : datos,
 		}).done(function(mensaje) {
 			if(mensaje[0]=="Exito"){
@@ -92,7 +92,7 @@ $(function(){
 		$.ajax({
 			dataType: "json",
 			method: "POST",
-			url:'../controladores/Controladorcliente.php',
+			url:'./controladores/Controladorcliente.php',
 			data : datos,
 		}).done(function(mensaje) {
 			if(mensaje[0]=="Exito"){
@@ -113,7 +113,7 @@ function cargar_ajax(){
 	$.ajax({
 		dataType: "json",
 		method: "POST",
-		url:'../controladores/Controladorcliente.php',
+		url:'./controladores/Controladorcliente.php',
 		data : datos,
 	}).done(function(json) {
 		console.log("Estos datos retorna: ",json);

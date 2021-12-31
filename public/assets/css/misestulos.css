@@ -1,0 +1,26 @@
+ btn{
+  border-radius:2px; 
+
+
+}
+.test{
+    background:green;
+    padding:15px;
+    margin:10px;
+}
+.natural{
+display: none;
+}
+.juridica{
+display: none;
+}
+#row1{
+	background-color:#C7CCF9 ; 
+}
+.table{
+ 
+}
+.footer{
+	padding: 20px;
+    background-color:#87A7AF; 
+}

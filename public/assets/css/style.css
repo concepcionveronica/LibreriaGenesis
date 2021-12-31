@@ -380,7 +380,10 @@ body {
 .container-fluid {
   width: 95%;
 }
-
+.seccion_ingreso {
+  color: #67a8e4;
+  border: 1px;
+}
 #topnav {
   position: fixed;
   right: 0;
@@ -1749,6 +1752,8 @@ dt {
   top: 0;
   left: 0;
   z-index: 1;
+  border-radius: 
+  
 }
 
 .waves-block {

@@ -35,16 +35,17 @@
 		$statement->execute();
 		$datos = $statement->fetchAll();
 		$html=$html_td="";
-
+        $con=0;
 		foreach ($datos as $row){
+			$con=$con+1;
 			$html_td.='<tr>';
-				$html_td.='<td>'.$row['idtusuario'].'</td>';
+				$html_td.='<td>'.$con.'</td>';
 				$html_td.='<td>'.$row['nombre'].'</td>';
 				$html_td.='<td>'.$row['apellido'].'</td>';
 				$html_td.='<td>'.$row['correo'].'</td>';
 				$html_td.='<td>
-								<button  type="button" class="btn btn-primary">Editar</button>
-								<button type="button" class="btn btn-danger btn_eliminar" data-id="'.$row['idtusuario'].'">Eliminar</button>
+								<button  type="button" class="btn btn-primary"><img src="./public/imagenes/agregar.png" height="40" width="40" onclick=""class="rounded-circle"></button>
+								<button type="button" class="btn btn-danger btn_eliminar" data-id="'.$row['idtusuario'].'"><img src="./public/imagenes/lista.png" height="40" width="40" onclick=""class="rounded-circle"></button>
 
 							</td>';
 			$html_td.='<tr>';
@@ -53,7 +54,7 @@
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>Row</th>
+						<th>N°</th>
 						<th>Nombre</th>
 						<th>Apellido</th>
 						<th>correo</th>
@@ -81,10 +82,6 @@
 	}
 
         
-
-
-
-
 		$afectados = $statement->rowCount();
 		print json_encode(
 			array("exito",$html,$_POST,$datos,$afectados)
