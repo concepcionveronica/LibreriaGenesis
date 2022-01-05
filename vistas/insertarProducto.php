@@ -134,7 +134,6 @@ $(function(){
 		});
 	});
 
-///
 	$(document).on("click",".btn_editar",function(event){
 		event.preventDefault();
 		var elemento = $(this);

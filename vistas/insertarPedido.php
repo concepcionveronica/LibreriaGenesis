@@ -24,10 +24,8 @@
 					<input type="hidden" name="insertar_valores" value="si_insertalo">
 					<div class="form-group">
 						<label for="nombre">DUI</label>
-						<input type="text" class="form-control" name="dui" id="dui" autocomplete="off" required="true" placeholder="ingrese dui" max="10" maxlength="10">	
-					</div>
-						<button  class="open-modal" onclick="document.getElementById('md_venta').style.display='block'">Agregar venta"></button>
-					
+						<input type="text" class="form-control" name="dui" id="dui" autocomplete="off" required="true" placeholder="ingrese dui" max="10" maxlength="10"></div>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#modal1">Agregar Pedido</button>
 					<div class="form-group">
                      <label>Fecha:</label>
                       <input  class="form-control" type="date"  id="fecha" name="fecha" value="fecha">
@@ -67,7 +65,7 @@
 				<h1>Datos registrados</h1>
 				<div id="aqui_la_tabla">
 				
-			        <table class="table table-bordered">
+			        <table class="table table-bordered" id="mitabla">
 				      <thead>
 					    <tr>
 						<th>N°</th>
@@ -99,6 +97,65 @@
 		</div>
 	</div>
 </div> <!-- end container -->
+</div>
+<div class="container"  >
+<div class="modal" tabindex="-1" id="modal1">
+	<div class="modal-dialog">
+		<div class="modal-content"></div>
+			<div class="modal-header">
+			Encabezado
+			</div>
+			<div class="modal-body">
+					<h1>Formulario Producto</h1>
+					<form method="POST" class="guardar_datos" id="guardar_los_datos" action="./controladores/ControladorProducto.php">
+						<input type="hidden" name="insertar_valores" value="si_insertalo">
+						<div class="form-group">
+							 <section>
+								
+							</section>
+						</div>
+						<div class="form-group">
+							
+						</div>
+						<div class="form-group">
+							
+						</div>
+						<div class="form-group">
+							
+						</div>
+						<div class="form-group" id="combobox" name="combobox" >
+
+							<label for="proveedor">Proveedor</label>	
+						<select for="proveedor"name="proveedor" type="text"class="form-control" autocomplete="off" name="proveedor" id="proveedor" data-input mask="'alias': 'proveedor'" placeholder="Ingrese proveedo"
+						autocomplete="off" required="true">
+						<?php
+						$instancia = new Conexion();
+                        $conectar = $instancia->obtene_conexion(); 
+						$sql = "SELECT *FROM producto";
+						$statement = $conectar->prepare($sql);
+						$statement->execute();
+						$datos = $statement->fetchAll();
+
+				/*		$sql="SELECT idProveedor, nombre FROM proveedor order by idProducto";
+		                  $statement = $conectar->prepare($sql);
+		                  $statement->execute();
+		                  $datos = $statement->fetchAll();  //obtiene todos los datos de select para un array */ ?>
+                        <option value="0">selesccion proveedor</option>
+                        <?php foreach($datos as $row){   ?>  
+                         <option value="<?php echo $row['idproveedor'] ?>"><?php echo $row['nombre']; ?></option>
+                        	<?php }?>
+                         </select>
+						</div>
+						<button type="submit" class="btn btn-primary"><img src="./public/imagenes/guardar.png" height="40" width="40" onclick="" class="rounded-circle" ></button>
+						<button type="reset" id="resetear" name="resetear" class="btn btn-danger"><img src="./public/imagenes/eliminar.png" height="40" width="40" onclick="" class="rounded-circle" ></button>
+					</form>
+			<div class="modal-footer">
+			Pie
+			<button type="btn btn-primary"><img src="./public/imagenes/guardar.png" height="40" width="40" onclick="" class="rounded-circle"></button>
+			<button type="btn btn-danger"><img src="./public/imagenes/eliminar.png" height="40" width="40" onclick="" class="rounded-circle" ></button>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- end wrapper -->
 <script>

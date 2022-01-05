@@ -1,4 +1,5 @@
-
+<?php  $fecha=date('Y-m-d');
+       $hora=date('H:i:s'); ?>
 <!-- Navigation Bar-->
 <header id="topnav">
 	<div class="topbar-main">
@@ -6,7 +7,7 @@
 			<!-- Logo container-->
 			<div class="logo">
 				<a href="" class="logo">
-					<img src="./public/imagenes/logo.png" alt="30" height="30" >
+					<img src="./public/imagenes/logo.png" alt="50" height="50" >
 				</a>
 			</div>
 			<!-- End Logo container-->
@@ -36,6 +37,7 @@
 					</li>
 					<!-- notification-->
 					<!-- User-->
+					<span><b><?php   ?><b></span>
 					<span><b>Oscar Urias<b></span>
 					<li class="list-inline-item dropdown notification-list">
 						<a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
@@ -76,7 +78,7 @@
 				<li class="has-submenu">
 					<a href="#"><i class="mdi mdi-view-dashboard"></i>ARCHIVO</a>
 					<ul class="submenu">
-						<li class="mdi mdi-human"><a onclick="contenido_seccion('vistas/insertarUsuario.php')">Ingresar Usuario</a></li>
+						<li><a onclick="contenido_seccion('vistas/insertarUsuario.php')">Ingresar Usuario</a></li>
 						<li><a onclick="contenido_seccion('vistas/insertarCliente.php')">Ingresar Cliente</a></li>
 						<li><a onclick="contenido_seccion('vistas/insertarProveedor.php')">Ingresar Proveedor</a></li>
 						<li><a onclick="contenido_seccion('vistas/insertarProducto.php')">Ingresar Producto</a></li>
@@ -97,8 +99,8 @@
 					<ul class="submenu megamenu">
 						<li>
 							<ul>
-								<li><a href="pages-login.php">Manual de Usuario</a></li>
-								<li><a href="pages-login.php">Backup</a></li>
+								<li><a onclick="contenido_seccion('vistas/mostrar_manual.php')">Manual de Usuario</a></li>
+								<li><a onclick="contenido_seccion('vistas/backup.php')">Backup</a></li>
 							</ul>
 						</li>
 					</ul>

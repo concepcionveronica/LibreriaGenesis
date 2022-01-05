@@ -51,7 +51,7 @@ require_once("Conexion.php");
 			$html_td.='<tr>';
 		}
 		$html='
-			<table class="table table-bordered">
+			<table class="table table-bordered " id="mitabla">
 				<thead>
 					<tr>
 						<th>N°</th>

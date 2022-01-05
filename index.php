@@ -4,9 +4,9 @@
 <body>
 
 	<?php include 'layouts/loader.php'; ?>
-	<?php //include 'vistas/insertarLogin.php'; ?>
 
 	<?php include 'layouts/navbar.php'; ?>
+	
 	<div id="div_vista_cont">
 		<!--Aca se carga todo las secciones -->
 	</div>

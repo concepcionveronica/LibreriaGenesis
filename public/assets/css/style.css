@@ -3345,7 +3345,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   padding: 9px 12px;
 }
 
-.bootstrap-touchspin .input-group-btn-vertical i {
+.bootstrap-touchspin .input-group-b
+tn-vertical i {
   top: 4px;
   left: 8px;
 }

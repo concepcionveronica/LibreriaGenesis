@@ -1,26 +1,28 @@
- btn{
+ .btn btn-primary{
   border-radius:2px; 
-
-
 }
-.test{
-    background:green;
-    padding:15px;
-    margin:10px;
+#modal1{
+ background-color:#f5f5f5;
+  /*font-family: "Source Sans Pro", sans-serif;
+  margin-top:15px;
+  border-radius:15px;
+*/
 }
-.natural{
-display: none;
+#mitabla{
+    background:write;
 }
-.juridica{
-display: none;
+#iframe{
+  width:90%;
+  height: 90vh;
 }
 #row1{
 	background-color:#C7CCF9 ; 
+	/*margin: 10px;
+	margin-top:5px;
+ */padding: 15px;
 }
-.table{
- 
-}
+
 .footer{
-	padding: 20px;
+	  padding: 10px;
     background-color:#87A7AF; 
 }

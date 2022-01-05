@@ -22,8 +22,6 @@ class Conexion
 
     }
     }
-
-
     function cerrar_sesion($pdo){
     $pdo=null;
     }
@@ -39,6 +37,10 @@ $statement = $conectar->prepare($sql);
 $statement->execute();
 $datos = $statement->fetchAll();
 
-
-print_r($datos);*/
+foreach($datos as $row){
+    
+print_r($datos);
+    
+}
+*/
 ?>

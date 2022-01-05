@@ -7,7 +7,7 @@
 					<div class="btn-group pull-right">
 						<ol class="breadcrumb hide-phone p-0 m-0">
 							<li class="breadcrumb-item"><a href="#">Genesis</a></li>
-							<li class="breadcrumb-item active">Vendedor</li>
+							<li class="breadcrumb-item active">Administrador</li>
 						</ol>
 					</div>                           					
 					<h4 class="page-title"></h4>
@@ -17,43 +17,23 @@
 		<!-- end page title end breadcrumb -->
 		<div class="row">
 			<div class="col-md-4" id="row1" name=row1>
-				<h1>Formulario Ventas</h1>
+				<h1>Formulario Backup</h1>
+<span><?php 
+ $fecha=date("d/m/Y h:m:s");
+						echo $fecha;?></span>
 				<form method="POST" class="guardar_datos" id="guardar_los_datos" action="./controladores/controladorVentas.php">
 					<input type="hidden" name="insertar_valores" value="si_insertalo">
 					<div class="form-group">
-						<label for="nombre">DUI</label>
-						<input type="text" class="form-control" name="dui" id="dui" autocomplete="off" required="true" placeholder="ingrese dui" max="10" maxlength="10">	
+						<label for="nombre">nombre:</label>
+						<input type="text" class="form-control" name="dui" id="dui" autocomplete="off" required="true" placeholder="" max="10" maxlength="10">	
 					</div>
-						<button  class="open-modal btn btn-primary" data-bs-toggle="modal" data-bs-target="#mimodal" >Agregar Venta"></button>
-					
 					<div class="form-group">
-                     <label>Fecha</label>
-                      <input  class="form-control" type="date"  id="fecha" name="fecha" value="fecha">
-                    </div>
-					<div class="form-group">
-                     <label>Total</label>
-                      <input  class="form-control" type="text" name="total" value="total">
-                    </div>
-                    <div class="form-group">
-                    <label>Efectivo</label>
-                      <input class="form-control" type="text" name="total" value="total">
-                    </div>
+						<label for="nombre">ubicacion:</label>
+						<input type="text" class="form-control" name="dui" id="dui" autocomplete="off" required="true" placeholder="aqui va la direccion donde se guara el backup" max="10" maxlength="10">	
+					</div>
+						<button  class="open-modal btn btn-primary" data-bs-toggle="modal" data-bs-target="#md_ventas" >generar Backup</button>
+					</div>
 
-					<div class="form-check">
-                          <div class="form-check">
-  							<input class="form-check-input" type="radio" name="factura" id="factura">
-  							<label class="form-check-label" for="factura">
-  							  Factura
- 						    </label>
-						</div>
-							<div class="form-check">
- 						 		<input class="form-check-input" type="radio" name="ticket" id="ticket" checked>
- 						 		<label class="form-check-label" for="ticket">
-  							    Ticket
-  								</label>
-							</div>
-					</div>
-					<button type="submit" class="btn btn-primary">Generar Comprobante<img src="./public/imagenes/guardar.png" height="40" width="40" onclick=""></button>
 				   </form>
 			       
 			</div>
@@ -110,12 +90,12 @@
 						<form method="POST" class="guardar_datos" id="guardar_los_datos" action="./controladores/ControladorProducto.php">
 						<input type="hidden" name="insertar_valores" value="si_insertalo">
 						<div class="form-group">
-							<label for="nombre">Nombre</label>
+							<label for="nombre">Nombre:</label>
 							<input type="text" class="form-control" name="nombre" id="nombre" data-inputmask="'alias': 'nombre'" autocomplete="off" required="true" placeholder="Ingrese nombre">
 						</div>
 						<div class="form-group">
-							<label for="marca">Marca</label>
-							<input type="text" class="form-control" name="marca" id="marca" autocomplete="off" required="true" placeholder="Ingrese marca">
+							<label for="ubicacion">Ubicacion;</label>
+							<input type="text" class="form-control" name="ubicacion" id="marca" autocomplete="off" required="true" placeholder="Ingrese ubicacion">
 						</div>
 						<div class="form-group">
 							<label for="stock">Stock</label>
@@ -153,17 +133,4 @@
 	
 </div>
 
-				<!---	<table>
-						<caption>table title and/or explanatory text</caption>
-						<thead>
-							<tr>
-								<th><<td colspan="" rowspan="" headers=""></td></th>
-							</tr>z
-						</thead>
-						<tbody>
-							<tr>
-								<td>data</td>
-							</tr>
-						</tbody>
-					</table>   -->
-					
+				

@@ -91,7 +91,7 @@
 				   <td>0012</td>
 				   <td>Oscar Urias</td>
 				   <td>
-								<button  type="button" class="btn btn-success " ><img src="./public/imagenes/agregar.png" height="40" width="40" onclick=""class="rounded-circle"></button>
+								<button  type="button" class="btn btn-primary " ><img src="./public/imagenes/agregar.png" height="40" width="40" onclick=""class="rounded-circle"></button>
 								
 							</td>
 			          <tr>

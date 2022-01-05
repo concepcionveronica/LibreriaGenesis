@@ -51,7 +51,7 @@
 			$html_td.='<tr>';
 		}
 		$html='
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="mitabla">
 				<thead>
 					<tr>
 						<th>N°</th>
@@ -91,6 +91,9 @@
 		print json_encode(array("error",$_POST,date("Y-m-d G:i:s")));
 	}
 	
-
+////EDITAR 
+//if(!isset($_POST['id'])){
+////header('location:index.php');
+//}
 
 ?>

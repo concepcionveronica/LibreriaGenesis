@@ -68,15 +68,11 @@
         <!-- jQuery  -->
         <script src="public/assets/js/jquery.min.js"></script>
         <script src="public/assets/js/popper.min.js"></script><!-- Popper for Bootstrap -->
-        <script src="public/assets/js/bootstrap.min.js"></script>
-        <script src="public/assets/js/modernizr.min.js"></script>
-        <script src="public/assets/js/jquery.slimscroll.js"></script>
-        <script src="public/assets/js/waves.js"></script>
-        <script src="public/assets/js/jquery.nicescroll.js"></script>
-        <script src="public/assets/js/jquery.scrollTo.min.js"></script>
+        <?php include 'layouts/footer.php'; ?>
 
+        <?php include 'layouts/footerScript.php'; ?>
         <!-- App js -->
-        <script src="public/assets/js/app.js"></script>
+        
 
     </body>
 </html>

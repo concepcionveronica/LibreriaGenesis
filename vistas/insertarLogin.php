@@ -8,7 +8,7 @@
         <meta content="Admin Dashboard" name="description" />
 
         <!-- App Icons -->
-        <link rel="shortcut icon" href="../public/assets/images/LG.png">
+        <link rel="shortcut icon" href="../public/assets/images/logo1.gif">
 
         <!-- Basic Css files -->
         <link href="../public/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -83,15 +83,11 @@
         <!-- jQuery  -->
         <script src="../public/assets/js/jquery.min.js"></script>
         <script src="../public/assets/js/popper.min.js"></script><!-- Popper for Bootstrap -->
-        <script src="../public/assets/js/bootstrap.min.js"></script>
-        <script src="../public/assets/js/modernizr.min.js"></script>
-        <script src="../public/assets/js/jquery.slimscroll.js"></script>
-        <script src="../public/assets/js/waves.js"></script>
-        <script src="../public/assets/js/jquery.nicescroll.js"></script>
-        <script src="../public/assets/js/jquery.scrollTo.min.js"></script>
+        <?php include '../layouts/footer.php'; ?>
 
-        <!-- App js -->
-        <script src="../public/assets/js/app.js"></script>
+        <?php include '../layouts/footerScript.php'; ?>
+                <!-- App js -->
+        
 
     </body>
 </html>
